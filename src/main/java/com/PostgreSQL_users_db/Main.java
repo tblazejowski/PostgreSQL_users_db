@@ -53,13 +53,13 @@ public class Main {
         System.out.println("Welcome!");
         System.out.println("type [1] if you want to log in\n" + "type [2] if you want to create new account\n"
                 + "type [0] anytime you want to exit");
-        int numberEntered = input.nextInt();
+        String numberEntered = input.next();
         switch (numberEntered) {
-            case 0:
+            case "0":
                 return State.EXIT;
-            case 1:
+            case "1":
                 return State.LOGGING;
-            case 2:
+            case "2":
                 return State.IN_REGISTRATION;
             default:
                 System.out.println("Sorry mate, wrong number");
@@ -86,11 +86,11 @@ public class Main {
         System.out.println("Welcome " + currentUser.getLogin() + "!");
         System.out.println("[0] Exit ");
         System.out.println("[9] Return to main menu by logging out");
-        int numberEntered = input.nextInt();
+        String numberEntered = input.next();
         switch (numberEntered) {
-            case 0:
+            case "0":
                 return State.EXIT;
-            case 9:
+            case "9":
                 return State.START;
             default:
                 return State.LOGGED_IN;
